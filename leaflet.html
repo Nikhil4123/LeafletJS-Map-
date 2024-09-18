@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work_Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/> <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+</head>
+<body>
+    <div class="mapcontainer"> 
+        <div class="maps">
+            <div id="map" style="width: 600px; height: 400px;"></div>
+
+        </div>
+    </div>
+
+    
+<script>
+
+	const map = L.map('map').setView([19.06826, 72.89673], 13);
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
+
+    const cords=[[19.06278, 72.89497],[19.06476, 72.89815],[19.06565, 72.90308]]
+    const details=['Road_Building  28-09-2024','pipeline_Maintenance  01-10-2024','School_Construction  03-09-2024']
+    
+
+    let l=cords.length;
+
+    for(let i=0;i<l;i++){
+         var marker=L.marker(cords[i]).addTo(map);
+         var toollip= L.tooltip({
+            permanent:true
+         }).setContent(details[i]);
+         marker.bindTooltip(toollip)
+    }
+
+    // const marker1 = L.marker([19.06278, 72.89497]).addTo(map);
+    // const marker2 = L.marker([19.06476, 72.89815]).addTo(map);
+    // const marker3 = L.marker([19.06525, 72.89888]).addTo(map);
+
+	
+
+	
+
+
+</script>
+
+    
+    <script src="./app.js"></script>
+</body>
+</html>
