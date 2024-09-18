@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work_Map</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="allProjects">
+            <div class="project project1">
+                <h3>Electricity Department</h3>
+                <p>Tender Issued Date: 10-09-2024</p>
+                <p>Project: Dia., 340 km Dhabol- Panvel Gas Pipeline Project Ph-II of GAIL (India) Ltd.</p>
+            </div>
+            <div class="project project2">
+                <h3>Pipelines Department</h3>
+                <p>Tender Issued Date: 14-09-2024</p>
+                <p>Project: 16” Dia., 660 km Numaligarh- Siliguri Product Pipeline of Oil India Ltd.</p>
+            </div>
+            <div class="project project3">
+                <h3>Road Department</h3>
+                <p>Tender Issued Date: 05-06-2024</p>
+                <p>Project: Dia., 340 km Dhabol- Panvel Gas Pipeline Project Ph-II of GAIL (India) Ltd.</p>
+            </div>
+            <div class="project project4">
+                <h3>Police Office Construction</h3>
+                <p>Tender Issued Date: 26-08-2024</p>
+                <p>Project: GAIL (India) Ltd. 16″-8″ Dia., 775 km</p>
+            </div>
+            <div class="project project5">
+                <h3>Civil (Building) Department</h3>
+                <p>Tender Issued Date: 28-07-2024</p>
+                <p>Project: 660 km Pipeline of Oil India Ltd., 30” Dia., 340 km Dh Ph-II of GAIL (India) Ltd.</p>
+            </div>
+            <div class="project project6">
+                <h3>Municipality (Kennel) Department</h3>
+                <p>Tender Issued Date: 14-06-2024</p>
+                <p>Project: GAIL (India) Ltd. 16″-8″ Dia., 775 km</p>
+            </div>
+        </div>
+
+        <div class="mapcontainer"> 
+            <div class="maps">
+                <div id="map" ></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
